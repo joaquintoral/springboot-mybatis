@@ -1,0 +1,22 @@
+spring:
+  profiles:
+    active: local
+
+---
+
+spring:
+  profiles: local
+  datasource:
+    url: jdbc:mysql://localhost:3306/dragon?useSSL=false&characterEncoding=utf8
+    username: root
+    password: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+  devtools:
+    livereload:
+      enabled: true
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml
+
+server:
+  port: 8080
