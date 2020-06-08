@@ -33,7 +33,11 @@ public class UserService implements UserDetailsService {
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
 	public User findUserByLoginId(String loginId) {
-		return userMapper.findUserByLoginId(loginId);
+
+		log.info("MCI > " + className + " -> findUserByLoginId()");
+		User user = userMapper.findUserByLoginId(loginId);
+		log.info("MCO > " + className + " -> findUserByLoginId()");
+		return user;
 	}
 
 	public void saveUser(User user) {

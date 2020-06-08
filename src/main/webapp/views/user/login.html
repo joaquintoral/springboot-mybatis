@@ -23,11 +23,11 @@
 			<input type="password" th:placeholder="Password" id="password" name="password" class="form-control" /> <br />
 
             <div align="center" th:if="${param.error}">
-                <p style="font-size: 20; color: #FF1C19;">아이디 패스워드가 올바르지 않거나 비활성화된 회원입니다.</p>
+                <p style="font-size: 20; color: #FF1C19;">ID password is incorrect or banned member.</p>
             </div>
 
             <div align="center" th:if="${param.authError}">
-                <p style="font-size: 20; color: #FF1C19;">만료된 토큰이거나 토큰값을 갱신하여 주시길 바랍니다.</p>
+                <p style="font-size: 20; color: #FF1C19;">Either it is an expired token or renew the token value.</p>
             </div>
 
 			<button class="btn btn-lg btn-primary btn-block" name="Submit" value="Login" type="Submit" th:text="Login"></button>

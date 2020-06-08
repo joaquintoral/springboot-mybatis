@@ -46,8 +46,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         log.info("MCI > " + className + " -> configure() | Param: HttpSecurity http");
-        http
-            .authorizeRequests()
+        http.httpBasic().and().authorizeRequests()
                 .antMatchers("/logging").permitAll()
                 .antMatchers("/").permitAll()
                 .antMatchers("/login").permitAll()
